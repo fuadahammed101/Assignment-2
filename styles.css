@@ -1,0 +1,515 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+  position: relative;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2F855A; /* greenish */
+  text-transform: lowercase;
+}
+
+.logo small {
+  font-size: 0.6rem;
+  color: #999;
+  text-transform: none;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  color: #2F855A;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #2F855A;
+  font-weight: 600;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .cart {
+    gap: 0.25rem;
+  }
+  .cart-text {
+    display: inline;
+  }
+}
+
+/* Hero Section */
+.hero {
+  max-width: 1440px;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0 0 1rem 0;
+  color: #000;
+}
+
+.highlight {
+  color: #2F855A;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Plants Section */
+.plants-section, .plants {
+  max-width: 950px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.plants-header h2, .plants h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  color: #2F855A;
+}
+
+.section-description {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.plants-header p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plant-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.plant-card h3 {
+  margin: 0.5rem 0 0.25rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2F855A;
+}
+
+.price {
+  font-weight: 600;
+  color: #E53E3E; /* red-ish */
+  margin-bottom: 0.75rem;
+}
+
+.btn-add-cart, .add-to-cart {
+  background-color: #2F855A;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-add-cart:hover, .add-to-cart:hover {
+  background-color: #276749;
+}
+
+/* Trusted Seller Section */
+.trusted-seller {
+  max-width: 1440px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.trusted-image {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.trusted-image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.trusted-badge {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+}
+
+/* Trusted Text */
+.trusted-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.trusted-text h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.trusted-text ul {
+  list-style: disc inside;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.trusted-text ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Latest Deals Section */
+.latest-deals {
+  max-width: 1440px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.latest-deals h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.deal-small, .deal-large {
+  position: relative;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.deal-small {
+  height: 150px;
+}
+
+.deal-large {
+  height: 310px;
+}
+
+.deal-text {
+  background: rgba(0,0,0,0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.deal-text h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.shop-now {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Newsletter Section */
+.newsletter {
+  max-width: 1440px;
+  margin: 4rem auto 0 auto;
+  padding: 3rem 2rem;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background-color: #2F855A;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #276749;
+}
+
+/* Footer */
+footer {
+  background: white;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  flex: 1 1 300px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  color: #666;
+  font-size: 1rem;
+  max-width: 300px;
+}
+
+.footer-links {
+  flex: 2 1 400px;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #2F855A;
+}
+
+.footer-social {
+  flex: 1 1 150px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.footer-social a:hover img {
+  filter: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .trusted-seller {
+    flex-direction: column;
+  }
+  .trusted-image, .trusted-text {
+    max-width: 100%;
+  }
+  .deals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .deal-large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+  .menu {
+    display: none;
+  }
+  .cart {
+    margin-left: auto;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+  .plants-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .deals-grid {
+    grid-template-columns: 1fr;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .newsletter-form input[type="email"], .newsletter-form button {
+    width: 100%;
+  }
+}
